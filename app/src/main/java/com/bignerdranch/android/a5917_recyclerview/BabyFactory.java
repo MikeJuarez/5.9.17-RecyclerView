@@ -1,6 +1,7 @@
 package com.bignerdranch.android.a5917_recyclerview;
 
 import android.content.Context;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +18,7 @@ public class BabyFactory {
 
     public static BabyFactory get(Context context){
         if (sBabyFactory == null)
-            return new BabyFactory(context);
+            sBabyFactory = new BabyFactory(context);
         return sBabyFactory;
     }
 
@@ -25,7 +26,7 @@ public class BabyFactory {
     {
         sBabyList = new ArrayList<>();
 
-        for (int i = 0; i < sBabyList.size(); i++)
+        for (int i = 0; i < 100; i++)
         {
             Baby newBaby = new Baby();
             newBaby.setAge(i);
@@ -33,6 +34,7 @@ public class BabyFactory {
 
             sBabyList.add(newBaby);
         }
+
     }
 
     public List<Baby> getsBabyList() {

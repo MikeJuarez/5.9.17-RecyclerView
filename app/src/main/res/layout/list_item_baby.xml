@@ -8,10 +8,10 @@
         android:id="@+id/baby_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Crime Title"/>
+        android:text="Baby Name"/>
     <TextView
         android:id="@+id/baby_age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Crime Date"/>
+        android:text="Baby Age"/>
 </LinearLayout>

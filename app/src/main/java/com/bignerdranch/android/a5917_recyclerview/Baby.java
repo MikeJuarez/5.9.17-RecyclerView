@@ -16,8 +16,8 @@ public class Baby {
         mSSN = UUID.randomUUID();
     }
 
-    public int getAge() {
-        return mAge;
+    public String getAge() {
+        return ("" + mAge);
     }
 
     public void setAge(int age) {

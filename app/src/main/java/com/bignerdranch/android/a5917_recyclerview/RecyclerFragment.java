@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -33,12 +34,14 @@ public class RecyclerFragment extends Fragment {
         mBabyRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         updateUI();
+
         return view;
     }
 
     private void updateUI() {
-        BabyFactory babyFactory = get(getActivity());
+        BabyFactory babyFactory = BabyFactory.get(getActivity());
         List<Baby> babies = babyFactory.getsBabyList();
+        Toast.makeText(getActivity(), "BabyListSize: " + babies.size(), Toast.LENGTH_SHORT).show();
         mAdapter = new BabyAdapter(babies);
         mBabyRecyclerView.setAdapter(mAdapter);
     }
